@@ -1,0 +1,7 @@
+{
+    "server": "localhost",
+    "user": "saran",
+    "pass": "fubu",
+    "db": "Techy_Soft",
+    "root_path": "/var/www/html/Project-Phase2/htdocs/"
+}
