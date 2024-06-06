@@ -1,4 +1,20 @@
 /* css/styles.css */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+h1 {
+    margin: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,31 +23,60 @@ body {
 }
 
 header {
-    background: linear-gradient(90deg, #4b6cb7, #182848);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+}
+header .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
     color: #fff;
-    padding: 1em 0;
-    text-align: center;
+}
+
+header.sticky {
+    background-color: #fff;
+    box-shadow: 0 0 10px #333;
+}
+
+.sticky nav ul li a,
+.sticky .logo {
+    color: #000;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
 }
 
-nav ul li {
-    margin: 0 1em;
-}
-
 nav ul li a {
     color: #fff;
+    margin: 0 1rem;
     text-decoration: none;
 }
 
 section {
     padding: 2em;
     text-align: center;
+}
+
+.home-section {
+    background: url('https://t4.ftcdn.net/jpg/06/65/48/97/360_F_665489762_nI4hW0kuDtmWXVZo5sMksfBn69mOBEYN.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #contact-form {
@@ -65,7 +110,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1em 0;
-    position: fixed;
     width: 100%;
     bottom: 0;
 }
@@ -77,6 +121,11 @@ footer {
 }
 
 /* Responsive Design */
+@media (max-width: 991px) {
+    header {
+        padding: 1rem 2rem;
+    }
+}
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
