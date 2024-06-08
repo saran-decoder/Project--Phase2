@@ -1,14 +1,13 @@
 <?php
 
 include_once 'scripts/Database.php';
-include_once 'scripts/Web.php';
-
-$web = new Web;
 
 function getConfig($key, $default=null)
 {
-    global $con_web;
-    $arr = json_decode($con_web, true);
+    global $config_web;
+    $config_path = __DIR__."../../../configs/getconnections.json";
+    $config_web = file_get_contents($config_path);
+    $arr = json_decode($config_web, true);
     if (isset($arr[$key])) {
         return $arr[$key];
     } else {
@@ -18,5 +17,6 @@ function getConfig($key, $default=null)
 
 function load_temp($name)
 {
-    return $_SERVER['DOCUMENT_ROOT'] . getConfig('root_path') . "_templates/$name.php";
+    $script = $_SERVER['DOCUMENT_ROOT'] . getConfig('root_path') . "_templates/$name.php";
+    include $script;
 }

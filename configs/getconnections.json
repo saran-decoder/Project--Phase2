@@ -3,5 +3,5 @@
     "user": "saran",
     "pass": "fubu",
     "db": "Techy_Soft",
-    "root_path": "/var/www/html/Project-Phase2/htdocs/"
+    "root_path": "/Project-Phase2/htdocs/"
 }
