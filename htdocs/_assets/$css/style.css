@@ -221,6 +221,26 @@ section.show-animate .service-card {
 }
 /* SERVICE CARD SECTION ENDED */
 
+/* PORTFOLIO CARD SECTION STARTED */
+.portfolio-section {
+    position: relative;
+    top: 2rem;
+}
+
+.portfolio-card {
+    background: #fff;
+    width: -webkit-fill-available;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: 1s;
+    box-shadow: 0 0 0 1px #ddd;
+}
+.portfolio-card:hover {
+    transition: 1s;
+    transform: scale(1.04);
+}
+/* PORTFOLIO CARD SECTION ENDED */
+
 
 #contact-form {
     display: flex;
@@ -290,7 +310,7 @@ footer {
     header {
         padding: 1rem;
     }
-    
+
     .res_nav {
         display: none;
     }
