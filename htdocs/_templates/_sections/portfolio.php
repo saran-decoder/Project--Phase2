@@ -1,6 +1,6 @@
 <section id="portfolio" class="portfolio-section">
-    <div class="container services-content">
-        <h2 class="mb-4 mt-5">Our portfolio</h2>
+    <div class="container portfolio-content">
+        <h2 class="my-5">Our portfolio</h2>
         <!-- Cards -->
         <div class="row" data-masonry='{"percentPosition": true }'>
             <div class="col-sm-6 col-lg-4 mb-4">

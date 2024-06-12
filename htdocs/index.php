@@ -12,7 +12,7 @@ include 'libs/mid.php';
 
     </head>
     <body>
-        <header class="header">
+        <header>
 
             <?=load_temp('_header');?>
 
