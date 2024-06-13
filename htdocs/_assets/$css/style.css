@@ -17,10 +17,6 @@ body {
     background: #f4f4f4;
 }
 
-h1 {
-    margin: 0;
-}
-
 section {
     padding: 2em;
     text-align: center;
@@ -246,6 +242,73 @@ section.show-animate .service-card {
 /* PORTFOLIO CARD SECTION ENDED */
 
 
+/* REVIEWS CARD SECTION STARTED */
+.reviews-section .reviews-content {
+    position: relative;
+    top: 4rem;
+}
+
+.carousel img {
+    width: 70px;
+    max-height: 70px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    overflow: hidden;
+}
+.carousel-inner {
+    padding: 1em;
+}
+
+@media screen and (man-width: 576px) {
+    .carousel-inner {
+    display: flex;
+    width: 90%;
+    margin-inline: auto;
+    padding: 1em 0;
+    overflow: hidden;
+    }
+    .carousel-item {
+    display: block;
+    margin-right: 0;
+    flex: 0 0 calc(100% / 2);
+    }
+}
+@media screen and (man-width: 768px) {
+    .carousel-item {
+    display: block;
+    margin-right: 0;
+    flex: 0 0 calc(100% / 3);
+    }
+}
+.carousel .card {
+    box-shadow: 0 0 0 1px #999 !important;
+    margin: 0 0.5em;
+    border: 0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 3rem !important;
+    height: 3rem !important;
+    background-color: #000 !important;
+    border-radius: 50%;
+    top: 50% !important;
+    transform: translateY(-50%);
+    opacity: unset !important;
+}
+/* REVIEWS CARD SECTION ENDED */
+
+
+/* CONTACT SECTION STARTED */
+/* .contact-section {
+    min-height: 100vh;
+} */
+
+.contact-section .contact-content {
+    position: relative;
+    top: 2rem;
+}
+
 #contact-form {
     display: flex;
     flex-direction: column;
@@ -270,6 +333,8 @@ section.show-animate .service-card {
     border: none;
     cursor: pointer;
 }
+/* CONTACT SECTION ENDED */
+
 
 footer {
     background: #333;
@@ -371,63 +436,3 @@ footer {
 
 }
 /* RESPONSIVE DESIGN ENDED */
-
-
-
-
-
-
-
-/* REVIEWS CARD SECTION STARTED */
-.reviews-section .reviews-content {
-    position: relative;
-    top: 4rem;
-}
-
-.carousel img {
-    width: 70px;
-    max-height: 70px;
-    border-radius: 50%;
-    margin-right: 1rem;
-    overflow: hidden;
-}
-.carousel-inner {
-    padding: 1em;
-}
-
-@media screen and (man-width: 576px) {
-    .carousel-inner {
-    display: flex;
-    width: 90%;
-    margin-inline: auto;
-    padding: 1em 0;
-    overflow: hidden;
-    }
-    .carousel-item {
-    display: block;
-    margin-right: 0;
-    flex: 0 0 calc(100% / 2);
-    }
-}
-@media screen and (man-width: 768px) {
-    .carousel-item {
-    display: block;
-    margin-right: 0;
-    flex: 0 0 calc(100% / 3);
-    }
-}
-.carousel .card {
-    margin: 0 0.5em;
-    border: 0;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    width: 3rem !important;
-    height: 3rem !important;
-    background-color: grey !important;
-    border-radius: 50%;
-    top: 50% !important;
-    transform: translateY(-50%);
-}
-/* REVIEWS CARD SECTION ENDED */
