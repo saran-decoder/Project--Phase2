@@ -17,6 +17,17 @@ body {
     background: #f4f4f4;
 }
 
+h2 {
+    opacity: 0;
+    transition: 1s;
+    transform: scale(.7);
+}
+
+section.show-animate h2 {
+    transform: scale(1);
+    opacity: 1;
+}
+
 section {
     padding: 2em;
     text-align: center;
@@ -112,35 +123,43 @@ a:hover {
 }
 
 .text-animy-1 {
+    opacity: 0;
     transition: 1s;
     transform: translateX(-100%);
 }
 section.show-animate .text-animy-1 {
+    opacity: 1;
     transform: translateX(0);
 }
 
 .text-animy-2 {
+    opacity: 0;
     transition: 1s;
     transform: translateX(100%);
 }
 section.show-animate .text-animy-2 {
+    opacity: 1;
     transform: translateX(0);
 }
 
 .image-layer-1 {
+    opacity: 0;
     transition: 1s;
     transform: scale(.7);
     filter: drop-shadow(12px 2px 6px #999);
 }
 section.show-animate .image-layer-1 {
+    opacity: 1;
     transform: scale(1);
 }
 
 .image-layer-2 {
+    opacity: 0;
     transition: 1s;
     transform: scale(.7);
 }
 section.show-animate .image-layer-2 {
+    opacity: 1;
     transform: scale(1);
 }
 /* HOME SECTION ENDED */
@@ -170,12 +189,14 @@ section.show-animate .image-layer-2 {
     transition: 0.5s;
     position: relative;
     z-index: 2;
+    opacity: 0;
     overflow: hidden;
     background: #fff;
     filter: drop-shadow(-10px 10px 2px rgba(0, 0, 0, 0.12));
     transform: scale(.7);
 }
 section.show-animate .service-card {
+    opacity: 1;
     transform: scale(1);
 }
 
@@ -239,6 +260,17 @@ section.show-animate .service-card {
     transition: 1s;
     transform: scale(1.04);
 }
+
+.card-animation {
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(70px);
+}
+
+section.show-animate .card-animation {
+    opacity: 1;
+    transform: translateY(0);
+}
 /* PORTFOLIO CARD SECTION ENDED */
 
 
@@ -246,6 +278,18 @@ section.show-animate .service-card {
 .reviews-section .reviews-content {
     position: relative;
     top: 4rem;
+}
+
+.carousel {
+    opacity: 0;
+    position: relative;
+    top: 3rem;
+    transition: 1s;
+}
+
+section.show-animate .carousel {
+    opacity: 1;
+    top: 0;
 }
 
 .carousel img {
@@ -300,42 +344,53 @@ section.show-animate .service-card {
 
 
 /* CONTACT SECTION STARTED */
-/* .contact-section {
-    min-height: 100vh;
-} */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
 
 .contact-section .contact-content {
     position: relative;
     top: 2rem;
 }
 
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.contact-img img {
+    opacity: 0;
+    transition: 1s;
+    overflow: hidden;
+    transform: translateX(-100px);
+}
+section.show-animate .contact-img img {
+    opacity: 1;
+    overflow: visible;
+    transform: translateX(0);
 }
 
-#contact-form label {
-    margin-top: 1em;
+form {
+    opacity: 0;
+    transition: 1s;
+    overflow: hidden;
+    transform: translateX(100px);
+}
+section.show-animate form {
+    opacity: 1;
+    overflow: visible;
+    transform: translateX(0);
 }
 
-#contact-form input, #contact-form textarea {
-    width: 80%;
-    padding: 0.5em;
-    margin-top: 0.5em;
+.form-control {
+    border: none !important;
+    box-shadow: 0 0 0 1px #999;
 }
 
-#contact-form button {
-    margin-top: 1em;
-    padding: 0.7em 2em;
-    background: #4b6cb7;
-    color: #000;
+.form-control:focus {
     border: none;
-    cursor: pointer;
+    box-shadow: 0 0 0 1px #999 !important;
 }
 /* CONTACT SECTION ENDED */
 
-
+/* FOOTER STARTED */
 footer {
     background: #333;
     position: relative;
@@ -351,6 +406,7 @@ footer {
     margin: 0 1em;
     text-decoration: none;
 }
+/* FOOTER ENDED */
 
 /* FLOATING ANIMATION STARTED */
 .floating {
@@ -418,6 +474,15 @@ footer {
         flex-direction: column !important;
         align-items: center !important;
     }
+
+    .contact-section .contact-content {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .contact-section form {
+        width: 100% !important;
+    }
     
 }
 
@@ -429,10 +494,5 @@ footer {
     nav ul li {
         margin: 0.5em 0;
     }
-
-    #contact-form input, #contact-form textarea {
-        width: 90%;
-    }
-
 }
 /* RESPONSIVE DESIGN ENDED */

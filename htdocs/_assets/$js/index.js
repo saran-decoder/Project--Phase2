@@ -33,7 +33,7 @@ window.onscroll = () => {
     // console.log(`ScrollY: ${top}`);
     
     sections.forEach(sec => {
-        let offset = sec.offsetTop - 150;
+        let offset = sec.offsetTop - 200;
         let height = sec.offsetHeight;
 
         // console.log(`Section: ${sec.id}, Offset: ${offset}, Height: ${height}, Top: ${top}`);
