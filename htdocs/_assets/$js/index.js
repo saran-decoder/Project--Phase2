@@ -29,21 +29,22 @@ $(document).ready(function(){
 let sections = document.querySelectorAll('section');
 
 window.onscroll = () => {
-    let top = window.scrollY;
-    // console.log(`ScrollY: ${top}`);
-    
-    sections.forEach(sec => {
-        let offset = sec.offsetTop - 200;
-        let height = sec.offsetHeight;
+    let scrollPosition = window.scrollY + window.innerHeight;
+    // console.log(`ScrollY: ${scrollPosition}`);
 
-        // console.log(`Section: ${sec.id}, Offset: ${offset}, Height: ${height}, Top: ${top}`);
+    sections.forEach(section => {
+        let sectionTop = section.offsetTop;
+        let sectionHeight = section.offsetHeight;
 
-        if (top >= offset && top < offset + height) {
-            sec.classList.add('show-animate');
-            // console.log(`Adding class to section: ${sec.id}`);
+        // console.log(`Section: ${section.id}, SectionTop: ${sectionTop}, Height: ${sectionHeight}, scrollPosition: ${scrollPosition}`);
+
+        // Check if the section is within the viewport
+        if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
+            section.classList.add('show-animate');
+            // console.log(`Adding class to section: ${section.id}`);
         } else {
-            sec.classList.remove('show-animate');
-            // console.log(`Removing class from section: ${sec.id}`);
+            section.classList.remove('show-animate');
+            // console.log(`Removing class from section: ${section.id}`);
         }
     });
 }

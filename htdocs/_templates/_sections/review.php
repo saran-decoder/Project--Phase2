@@ -1,4 +1,4 @@
-<section class="reviews-section" id="reviews">
+<section id="reviews" class="reviews-section">
     <div class="container reviews-content">
 
         <h2 class="my-5">Our Reviews</h2>
