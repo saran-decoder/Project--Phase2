@@ -1,7 +1,7 @@
 <section id="reviews" class="reviews-section">
     <div class="container reviews-content">
 
-        <h2 class="my-5">Our Reviews</h2>
+        <h2 class="mb-5 m-0">Our Reviews</h2>
         
         <div id="testimonialCarousel" class="carousel">
             <div class="carousel-inner">

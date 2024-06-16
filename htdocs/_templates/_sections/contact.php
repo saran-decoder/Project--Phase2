@@ -1,7 +1,7 @@
 <section id="contact" class="contact-section">
     <h2 class="mt-5 mb-2">Contact Us</h2>
     <div class="contact-content d-flex align-items-center justify-content-around">
-        <div class="contact-img">
+        <div class="contact-img mb-1">
             <img src="https://img.freepik.com/free-vector/flat-design-illustration-customer-support_23-2148887720.jpg?size=338&ext=jpg&ga=GA1.1.1141335507.1717977600&semt=ais_user" alt="contact image logo">
         </div>
         <form class="needs-validation w-50" method="post" autocomplete="off" action="index.php" novalidate>
@@ -22,6 +22,4 @@
             <button class="btn btn-outline-success my-4" type="submit">Submit</button>
         </form>
     </div>
-    <!-- <div class="container contact-content"> -->
-    <!-- </div> -->
 </section>

@@ -1,6 +1,6 @@
 <section id="services" class="services-section">
     <div class="container services-content d-flex flex-column align-items-center">
-        <h2 class="my-5">Our Services</h2>
+        <h2 class="mt-3 mb-3">Our Services</h2>
         <!-- Cards -->
         <div class="row mt-5 mt-md-4 row-cols-1 row-cols-sm-1 row-cols-md-3 justify-content-center">
             <div class="col pb-3">

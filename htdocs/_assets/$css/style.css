@@ -17,16 +17,18 @@ body {
     background: #f4f4f4;
 }
 
-h2 {
+/* .home-section h2, .about-section h2, 
+.portfolio-section h2, .services-section h2, .contact-section h2 {
     opacity: 0;
     transition: 1s;
     transform: scale(.7);
 }
 
-section.show-animate h2 {
+section.show-animate .home-section h2, .about-section h2, 
+.portfolio-section h2, .services-section h2, .contact-section h2 {
     transform: scale(1);
     opacity: 1;
-}
+} */
 
 section {
     padding: 2em;
@@ -186,19 +188,19 @@ section.show-animate .image-layer-2 {
     border-radius: 5px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
     cursor: pointer;
-    transition: 0.5s;
+    /* transition: 0.5s; */
     position: relative;
     z-index: 2;
-    opacity: 0;
+    /* opacity: 0; */
     overflow: hidden;
     background: #fff;
     filter: drop-shadow(-10px 10px 2px rgba(0, 0, 0, 0.12));
-    transform: scale(.7);
+    /* transform: scale(.7); */
 }
-section.show-animate .service-card {
+/* section.show-animate .service-card {
     opacity: 1;
     transform: scale(1);
-}
+} */
 
 .services-content .service-card:hover {
     transform: scale(1.04);
@@ -280,7 +282,7 @@ section.show-animate .card-animation {
     top: 4rem;
 }
 
-.carousel {
+/* .carousel {
     opacity: 0;
     position: relative;
     top: 3rem;
@@ -290,7 +292,7 @@ section.show-animate .card-animation {
 section.show-animate .carousel {
     opacity: 1;
     top: 0;
-}
+} */
 
 .carousel img {
     width: 70px;
@@ -352,10 +354,11 @@ section.show-animate .carousel {
 
 .contact-section .contact-content {
     position: relative;
+    overflow: hidden;
     top: 2rem;
 }
 
-.contact-img img {
+/* .contact-img img {
     opacity: 0;
     transition: 1s;
     overflow: hidden;
@@ -365,9 +368,9 @@ section.show-animate .contact-img img {
     opacity: 1;
     overflow: visible;
     transform: translateX(0);
-}
+} */
 
-form {
+/* form {
     opacity: 0;
     transition: 1s;
     overflow: hidden;
@@ -377,7 +380,7 @@ section.show-animate form {
     opacity: 1;
     overflow: visible;
     transform: translateX(0);
-}
+} */
 
 .form-control {
     border: none !important;
@@ -481,7 +484,7 @@ footer {
     }
 
     .contact-section form {
-        width: 100% !important;
+        width: 90% !important;
     }
     
 }
