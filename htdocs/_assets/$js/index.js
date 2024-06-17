@@ -51,34 +51,27 @@ window.onscroll = () => {
 
 
 // Reviews JavaScript
-const multipleItemCarousel = document.querySelector("#testimonialCarousel");
+$(document).ready(function() {
+    var $carouselItems = $('.carousel-item');
+    var currentIndex = 0;
 
-if (window.matchMedia("(min-width: 576px)").matches) {
-    const carousel = new bootstrap.Carousel(multipleItemCarousel, {
-        interval: false
+    function updateActiveItem() {
+        $carouselItems.removeClass('active');
+        $carouselItems.eq(currentIndex).addClass('active');
+    }
+
+    $('.carousel-control-next').click(function() {
+        currentIndex = (currentIndex + 1) % $carouselItems.length;
+        updateActiveItem();
     });
 
-    let carouselWidth = document.querySelector(".carousel-inner").scrollWidth;
-    let cardWidth = document.querySelector(".carousel-item").offsetWidth;
-
-    let scrollPosition = 0;
-
-    document.querySelector(".carousel-control-next").addEventListener("click", function () {
-        if (scrollPosition < carouselWidth - cardWidth * 3) {
-            scrollPosition += cardWidth;
-            document.querySelector(".carousel-inner").scrollTo({ left: scrollPosition, behavior: 'smooth' });
-        }
+    $('.carousel-control-prev').click(function() {
+        currentIndex = (currentIndex - 1 + $carouselItems.length) % $carouselItems.length;
+        updateActiveItem();
     });
 
-    document.querySelector(".carousel-control-prev").addEventListener("click", function () {
-        if (scrollPosition > 0) {
-            scrollPosition -= cardWidth;
-            document.querySelector(".carousel-inner").scrollTo({ left: scrollPosition, behavior: 'smooth' });
-        }
-    });
-} else {
-    multipleItemCarousel.classList.add("slide");
-}
+    updateActiveItem();
+});
 
 
 // Contact Form Validation
@@ -120,3 +113,5 @@ $(document).ready(function() {
         }
     });
 });
+
+// Contact Send TO Email Server
