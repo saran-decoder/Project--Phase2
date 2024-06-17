@@ -2,7 +2,7 @@
 
 class Database
 {
-    private $conn = null;
+    public static $conn = null;
 
     public static function mkConnection()
     {

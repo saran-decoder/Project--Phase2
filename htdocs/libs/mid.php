@@ -1,6 +1,7 @@
 <?php
 
 include_once 'scripts/Database.php';
+include_once 'scripts/Forms.php';
 
 function getConfig($key, $default=null)
 {

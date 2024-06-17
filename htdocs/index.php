@@ -35,6 +35,6 @@ include 'libs/mid.php';
         
         </footer>
 
-        <?=load_temp('_script');?>
     </body>
+    <?=load_temp('_script');?>
 </html>

@@ -53,29 +53,70 @@ window.onscroll = () => {
 // Reviews JavaScript
 const multipleItemCarousel = document.querySelector("#testimonialCarousel");
 
-if (window.matchMedia("(min-width:576px)").matches) {
-const carousel = new bootstrap.Carousel(multipleItemCarousel, {
-    interval: false
-});
+if (window.matchMedia("(min-width: 576px)").matches) {
+    const carousel = new bootstrap.Carousel(multipleItemCarousel, {
+        interval: false
+    });
 
-var carouselWidth = $(".carousel-inner")[0].scrollWidth;
-var cardWidth = $(".carousel-item").width();
+    let carouselWidth = document.querySelector(".carousel-inner").scrollWidth;
+    let cardWidth = document.querySelector(".carousel-item").offsetWidth;
 
-var scrollPosition = 0;
+    let scrollPosition = 0;
 
-$(".carousel-control-next").on("click", function () {
-    if (scrollPosition < carouselWidth - cardWidth * 3) {
-        console.log("next");
-        scrollPosition = scrollPosition + cardWidth;
-        $(".carousel-inner").animate({ scrollLeft: scrollPosition }, 800);
-    }
-});
-$(".carousel-control-prev").on("click", function () {
-    if (scrollPosition > 0) {
-        scrollPosition = scrollPosition - cardWidth;
-        $(".carousel-inner").animate({ scrollLeft: scrollPosition }, 800);
-    }
-});
+    document.querySelector(".carousel-control-next").addEventListener("click", function () {
+        if (scrollPosition < carouselWidth - cardWidth * 3) {
+            scrollPosition += cardWidth;
+            document.querySelector(".carousel-inner").scrollTo({ left: scrollPosition, behavior: 'smooth' });
+        }
+    });
+
+    document.querySelector(".carousel-control-prev").addEventListener("click", function () {
+        if (scrollPosition > 0) {
+            scrollPosition -= cardWidth;
+            document.querySelector(".carousel-inner").scrollTo({ left: scrollPosition, behavior: 'smooth' });
+        }
+    });
 } else {
-    $(multipleItemCarousel).addClass("slide");
+    multipleItemCarousel.classList.add("slide");
 }
+
+
+// Contact Form Validation
+$(document).ready(function() {
+    // Function to display invalid feedback message
+    function displayInvalidFeedback(field, message) {
+        field.addClass('is-invalid');
+        field.next('.invalid-feedback').text(message).show();
+    }
+
+    // Function to validate a field with regex and custom message
+    function validateField(field, regex, message) {
+        if (field.val().trim() === "" || (regex && !regex.test(field.val().trim()))) {
+            displayInvalidFeedback(field, message);
+            return false;
+        } else {
+            field.removeClass('is-invalid');
+            field.next('.invalid-feedback').hide();
+            return true;
+        }
+    }
+
+    // Handle form submission
+    $('#contactForm').on('submit', function(e) {
+        let isValid = true;
+
+        // Validation regex patterns
+        const emailRegex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        const phoneRegex = /^\d+$/;
+
+        // Validate fields
+        isValid &= validateField($('#name'), null, 'Please enter your full name.');
+        isValid &= validateField($('#phone'), phoneRegex, 'Please enter a valid phone number.');
+        isValid &= validateField($('#email'), emailRegex, 'Please enter a valid email address.');
+        isValid &= validateField($('#message'), null, 'Please enter a message.');
+
+        if (!isValid) {
+            e.preventDefault();
+        }
+    });
+});
