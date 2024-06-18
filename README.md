@@ -2,7 +2,7 @@
 
 This is a simple website for a software company using HTML, CSS, and JavaScript, PHP, MySQL, etc,.
 
-**Project 3 setup demo video:** <a href="">Link</a>
+**Project 3 setup demo video:** <a href="https://www.linkedin.com/posts/saran-web-developer_internship-nexusinfo-project-activity-7208737181845057536-6tjP?utm_source=share&utm_medium=member_desktop">Link</a>
 
 ## Project Details
 
@@ -64,7 +64,7 @@ This is a simple website for a software company using HTML, CSS, and JavaScript,
    ```bash
    git clone https://github.com/saran-decoder/Project-Phase2.git
    
-2. Project 3 full setup guidance video <a href="">Link</a>
+2. Project 3 full setup guidance video <a href="https://www.linkedin.com/posts/saran-web-developer_internship-nexusinfo-project-activity-7208737181845057536-6tjP?utm_source=share&utm_medium=member_desktop">Link</a>
 
 ## Project Structure
 
